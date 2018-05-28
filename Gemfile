@@ -1,4 +1,4 @@
-source 'http://rubygems.vmcommerce.intra'
+source 'https://rubygems.org'
 
 gem 'httparty'
 gem 'rspec'
