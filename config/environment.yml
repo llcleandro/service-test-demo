@@ -1,0 +1,17 @@
+MOCK:
+  PATH: 
+    api_path: "https://jsonplaceholder.typicode.com" 
+
+  GET_SERVICES:
+    search_post_api: "/posts"
+    search_comment_api: "/posts/{ID}/comments"
+
+  POST_SERVICES:
+    search_comments_api: "/comments"
+    search_photos_api: "/photos"
+
+
+  put_SERVICES:
+    search_comments_api: "/comments"
+    search_photos_api: "/photos"
+
