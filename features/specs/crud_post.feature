@@ -1,4 +1,4 @@
-Feature: Be able to create new posts and validate in search service
+Feature: Be able to create, search, update and delete posts
 
 @create @crud
 Scenario: Creating new post
@@ -15,8 +15,6 @@ Scenario: Deleting post
 	Given that I send post for delete with postId "101"
 	# Then response "200" should be returned
 
-Feature: Be able to search posts and see the response in different environments
-
 @searchAllPosts
 Scenario: Services search all posts - validate Json
 	Given that I search all posts
@@ -24,14 +22,14 @@ Scenario: Services search all posts - validate Json
 	And the json should be formated in schema "search_all_posts.json"
 
 @searchPost
-Scenario: Services search post -  specific post
+Scenario: Services search post - specific post
 	Given that I search the post id "1"
 	Then response "200" should be returned
 	Then the searched post should have been id "1"
 	And the json should be formated in schema "search_post.json"
 
 @searchCommentsPost
-Scenario: Services search comments -  comments of specific post
+Scenario: Services search comments - comments of specific post
 	Given that I search the comments of post id "1"
 	Then response "200" should be returned
 	Then the searched comment should have been postId "1"
