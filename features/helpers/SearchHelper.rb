@@ -2,7 +2,7 @@ module SearchHelper
 	def search_post_id(postId)
 		@path = ENVIRONMENT['PATH']['api_path']
 		@service = ENVIRONMENT['GET_SERVICES']['search_post_api']
-		@url = "#{@path}#{@service}#{postId}"
+		@url = "#{@path}#{@service}/#{postId}"
 		@last_response = ServiceApi.get(@url)
 	end	
 	def search_all_posts
